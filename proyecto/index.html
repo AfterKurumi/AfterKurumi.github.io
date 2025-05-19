@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Enciclopedia de Métodos Numéricos</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        header {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            background: #333;
+            padding: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .section {
+            display: none;
+            padding: 20px;
+        }
+        .section.active {
+            display: flex;
+            gap: 20px;
+        }
+        .section img {
+            max-width: 300px;
+            border-radius: 10px;
+        }
+        .content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            flex: 1;
+            overflow-y: auto;
+            max-height: 600px;
+        }
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input, textarea, button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+        a.download-link {
+            display: inline-block;
+            margin-top: 15px;
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a.download-link:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Enciclopedia Virtual de Métodos Numéricos</h1>
+    </header>
+    <nav>
+        <a onclick="showSection('inicio')">Inicio</a>
+        <a onclick="showSection('metodos')">Métodos</a>
+        <a onclick="showSection('aplicaciones')">Aplicaciones</a>
+        <a onclick="showSection('recursos')">Recursos</a>
+        <a onclick="showSection('contacto')">Contacto</a>
+    </nav>
+
+    <div id="inicio" class="section active">
+        <img src="img/inicio.png" alt="Inicio" />
+        <div class="content">
+            <h2>Introducción</h2>
+            <p>Los métodos numéricos son un conjunto de técnicas matemáticas utilizadas para encontrar soluciones aproximadas a problemas que no pueden resolverse de manera exacta o analítica. A lo largo de la historia, estas herramientas han sido clave en el avance de la ingeniería, las ciencias físicas, económicas y computacionales, ya que permiten modelar y resolver situaciones complejas del mundo real utilizando algoritmos que pueden implementarse en computadoras.
+
+En lugar de depender de fórmulas cerradas, los métodos numéricos emplean procesos iterativos, aproximaciones y el análisis de errores para obtener resultados precisos dentro de márgenes aceptables. Esto incluye, por ejemplo, encontrar raíces de funciones no lineales, resolver sistemas de ecuaciones, calcular derivadas e integrales definidas, e incluso modelar ecuaciones diferenciales ordinarias y parciales.
+
+Hoy en día, gracias al poder de procesamiento de las computadoras y el desarrollo de lenguajes y plataformas como Python, MATLAB, Octave, R y otros, los métodos numéricos no solo son más accesibles, sino también más necesarios. Profesionales y estudiantes de diversas disciplinas utilizan estas técnicas para optimizar procesos, validar modelos, analizar datos y tomar decisiones fundamentadas.
+
+Esta enciclopedia virtual está diseñada para ser una herramienta de consulta y aprendizaje que explique paso a paso los fundamentos, aplicaciones y ejemplos prácticos de los métodos numéricos más utilizados. Aquí encontrarás tanto el marco teórico como las aplicaciones reales que demuestran su importancia en el mundo moderno.</p>
+        </div>
+    </div>
+    <div id="metodos" class="section">
+        <img src="img/metodos.png" alt="Métodos" />
+        <div class="content">
+            <h2>Métodos Numéricos</h2>
+            <p>Los métodos numéricos son técnicas que nos permiten encontrar soluciones aproximadas a problemas matemáticos complejos utilizando algoritmos. Estas soluciones se obtienen mediante procesos iterativos que reducen el error progresivamente hasta alcanzar un nivel aceptable de precisión.
+
+Existen diversos tipos de métodos, cada uno con su aplicación específica:
+
+Métodos para encontrar raíces de ecuaciones: como el método de bisección, falsa posición, Newton-Raphson y secante. Se utilizan para encontrar los valores de una variable que hacen que una función se iguale a cero.
+
+Métodos de interpolación y ajuste de curvas: como los métodos de Lagrange, Newton y los splines cúbicos. Permiten estimar valores intermedios entre puntos conocidos o ajustar datos experimentales mediante funciones.
+
+Derivación e integración numérica: se aplican para calcular derivadas e integrales cuando no es posible hacerlo analíticamente. Incluyen reglas como la del trapecio, Simpson 1/3 y Simpson 3/8.
+
+Resolución de sistemas de ecuaciones lineales: métodos como eliminación de Gauss, factorización LU, y métodos iterativos como Jacobi y Gauss-Seidel. Son fundamentales en problemas de ingeniería estructural, análisis de redes eléctricas, etc.
+
+Solución de ecuaciones diferenciales ordinarias (EDO): incluyen el método de Euler, Heun y Runge-Kutta. Se utilizan para modelar sistemas dinámicos, como el movimiento de partículas o la evolución de procesos biológicos.
+
+Cada uno de estos métodos tiene ventajas y limitaciones, y su elección depende del tipo de problema, la precisión requerida y los recursos computacionales disponibles.</p>
+        </div>
+    </div>
+    <div id="aplicaciones" class="section">
+        <img src="img/aplicaciones.png" alt="Aplicaciones" />
+        <div class="content">
+            <h2>Aplicaciones</h2>
+            <p>Los métodos numéricos tienen una aplicación transversal en múltiples áreas del conocimiento. Su principal ventaja es que permiten resolver problemas complejos mediante procedimientos computacionales, incluso cuando no existen soluciones exactas. A continuación, se describen algunas de las principales áreas donde se aplican:
+
+Ingeniería: Son fundamentales en el análisis estructural, simulaciones de fluidos (CFD), diseño asistido por computadora (CAD), análisis térmico y mecánico, modelado de sistemas eléctricos y electrónicos, entre otros.
+
+Física: Se utilizan para resolver ecuaciones diferenciales en dinámica de partículas, simulaciones cuánticas, análisis de ondas, electromagnetismo, óptica y termodinámica computacional.
+
+Biología y medicina: Se aplican en el modelado de sistemas biológicos, crecimiento poblacional, difusión de fármacos, simulaciones de órganos, imágenes médicas y predicción de epidemias.
+
+Economía y finanzas: Permiten simular escenarios económicos, calcular riesgos, optimizar carteras de inversión, resolver modelos econométricos y proyectar tendencias de mercado.
+
+Informática e inteligencia artificial: En el entrenamiento de redes neuronales, algoritmos evolutivos, optimización, aprendizaje automático, visión por computadora y análisis de big data.
+
+Astronomía y geofísica: Se utilizan en el cálculo de trayectorias orbitales, simulación del clima, análisis de terremotos, detección de recursos naturales y geolocalización.
+
+Educación y desarrollo científico: Son parte esencial de simuladores interactivos, herramientas de visualización matemática y desarrollo de software científico.
+
+En resumen, los métodos numéricos son un pilar para la innovación tecnológica y científica, ya que hacen posible estudiar y resolver problemas reales que serían inaccesibles mediante métodos analíticos tradicionales. Su versatilidad los convierte en una herramienta indispensable en la era digital.</p>
+        </div>
+    </div>
+    <div id="recursos" class="section">
+        <img src="img/recursos.png" alt="Recursos" />
+        <div class="content">
+            <h2>Recursos</h2>
+            <p>En esta sección encontrarás una recopilación de herramientas, bibliografía y plataformas que te ayudarán a aprender, aplicar y profundizar en los métodos numéricos:
+
+📘 Bibliografía recomendada:<br/>
+"Numerical Methods for Engineers" – Steven C. Chapra y Raymond P. Canale.<br/>
+"Métodos Numéricos Aplicados con Software" – aut. Gilberto E. Urroz.<br/>
+"Applied Numerical Methods with MATLAB" – Steven Chapra.<br/>
+"Métodos Numéricos" – Burden y Faires.<br/><br/>
+
+Estos textos ofrecen fundamentos teóricos, ejemplos prácticos y ejercicios resueltos que abarcan desde conceptos básicos hasta temas avanzados.<br/><br/>
+
+💻 Software especializado:<br/>
+Python: con bibliotecas como NumPy, SciPy, SymPy y Matplotlib.<br/>
+MATLAB: potente entorno numérico con muchas funciones integradas.<br/>
+GNU Octave: alternativa libre a MATLAB, ideal para estudiantes.<br/>
+Excel: útil para cálculos simples, tablas y gráficos.<br/>
+R: orientado a análisis estadístico y procesamiento de datos.<br/><br/>
+
+🌐 Plataformas y cursos online:<br/>
+Khan Academy<br/>
+Coursera<br/>
+edX<br/>
+YouTube – canales educativos<br/>
+<a href="https://www.geogebra.org/" target="_blank" rel="noopener noreferrer">Geogebra</a> y <a href="https://www.wolframalpha.com/" target="_blank" rel="noopener noreferrer">WolframAlpha</a><br/><br/>
+
+📂 Archivos útiles:<br/>
+Plantillas en Excel para métodos iterativos.<br/>
+Scripts en Python y MATLAB para resolver ejercicios.<br/>
+PDFs con formularios de fórmulas, algoritmos y pasos.<br/><br/>
+
+<a href="guias_metodos_numericos.pdf" class="download-link" download>📥 Descargar guías de métodos numéricos (PDF)</a>
+
+</p>
+        </div>
+    </div>
+    <div id="contacto" class="section">
+        <img src="img/contacto.png" alt="Contacto" />
+        <div class="content">
+            <h2>Contáctanos</h2>
+            <form action="mailto:tucorreo@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="nombre" placeholder="Tu nombre" required />
+                <input type="email" name="correo" placeholder="Tu correo electrónico" required />
+                <textarea name="mensaje" rows="5" placeholder="Tu mensaje..." required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Enciclopedia de Métodos Numéricos - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</body>
+</html>
